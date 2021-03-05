@@ -20,6 +20,11 @@ public class StringCalculatorTest{
     public final void whenNonNumberIsUsedThenExceptionIsThrown() {
         StringCalculator.add("1,X");
     }
+
+    @Test
+    public final void whenEmptyStringIsUsedThenReturnValueIs0(){
+        Assert.assertEquals(0,StringCalculator.add(""));
+    }
 }
 
 
