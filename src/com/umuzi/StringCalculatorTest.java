@@ -35,7 +35,6 @@ public class StringCalculatorTest{
     public final void whenTwoNumbersAreUsedThenReturnValueIsTheirSum(){
         Assert.assertEquals(3+6,StringCalculator.add("3,6"));
     }
-
 }
 
 
