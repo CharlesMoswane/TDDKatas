@@ -50,6 +50,11 @@ public class StringCalculatorTest{
     public final void whenDelimiterIsSpecifiedThenItIsUsedToSeparateNumbers(){
         Assert.assertEquals(3+6+15,StringCalculator.add("//;n3;6;15"));
     }
+
+    @Test(expectedExceptions = RuntimeException.class)
+    public final void whenNegativeNumberIsUsedThenRuntimeExceptionIsThrown(){
+        StringCalculator.add("3,-6,15,18,46,33");
+    }
 }
 
 
