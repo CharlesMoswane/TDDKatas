@@ -53,14 +53,14 @@ public class StringCalculatorTest{
 
     @Test(expectedExceptions = RuntimeException.class)
     public final void whenNegativeNumberIsUsedThenRuntimeExceptionIsThrown(){
-        StringCalculator.add("3,-6,15,18,46,33");
+        StringCalculator.add("3,-6,15,-18,46,33");
     }
 
     @Test
     public final void whenNegativeNumbersAreUsedThenRuntimeExceptionIsThrown(){
         RuntimeException exception = null;
         try {
-            StringCalculator.add("3,-6,15,18,46,33");
+            StringCalculator.add("3,-6,15,-18,46,33");
         }catch (RuntimeException e){
             exception = e;
         }
